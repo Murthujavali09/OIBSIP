@@ -47,10 +47,10 @@ def validate_user_input():
     allowed_numbers = "".join(set(NUMBERS) - set(excluded_chars))
 
     required_categories = [
-        ("Allcharacters", "yes", allowed_chars),
+        ("Lowercase Letters", "yes", allowed_chars),
         ("Symbols", include_symbols.get(), allowed_symbols),
         ("Numbers", include_numbers.get(), allowed_numbers),
-        ("Uppercase", include_uppercase.get(), allowed_uppercase)
+        ("Uppercase Letters", include_uppercase.get(), allowed_uppercase)
     ]
     if password_length <= 5:
         messagebox.showwarning("Secure password generator says",
