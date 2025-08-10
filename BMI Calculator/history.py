@@ -6,6 +6,12 @@ from tkinter import messagebox
 
 
 class History(Frame):
+
+    def logout(self):
+        self.controller.frames['Dashboard'].clear_results()
+        self.controller.current_user_id = None
+        self.controller.show_frame("Login")
+
     def display_data(self, data):
         cols = list(data.columns)[2:]
         col_display_names = {
@@ -50,10 +56,6 @@ class History(Frame):
         )
         self.tree.config(yscroll=scrollbar.set)
         scrollbar.pack(side=RIGHT, fill="y")
-
-    def logout(self):
-        self.controller.current_user_id = None
-        self.controller.show_frame("Login")
 
     def refresh(self):
         for widget in self.table_frame.winfo_children():

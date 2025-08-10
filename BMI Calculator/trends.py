@@ -6,6 +6,11 @@ import database
 
 class Trends(Frame):
 
+    def logout(self):
+        self.controller.frames['Dashboard'].clear_results()
+        self.controller.current_user_id = None
+        self.controller.show_frame("Login")
+
     def cleanup_graphs(self):
         if hasattr(self, 'current_canvas'):
             try:
@@ -15,9 +20,6 @@ class Trends(Frame):
                 pass
         plt.close('all')
 
-    def logout(self):
-        self.controller.current_user_id = None
-        self.controller.show_frame("Login")
 
     def __init__(self, parent, controller):
 

@@ -6,10 +6,11 @@ import database
 
 
 class Dashboard(Frame):
+
     def clear_results(self):
         self.BMI.config(text="")
         self.Category.config(text="")
-
+        
     def logout(self):
         self.clear_results()
         self.controller.current_user_id = None
