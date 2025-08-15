@@ -1,5 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
 # Secure Password Generator (Tkinter, Python)
 
 A desktop GUI tool to generate strong, customizable passwords using cryptographically secure randomness, with options to include/exclude character types and specific characters, plus instant strength feedback.
@@ -109,8 +107,7 @@ A desktop GUI tool to generate strong, customizable passwords using cryptographi
 
 ## Project Structure (suggested)
 
-- app.py — main Tkinter application (current code)
-- README.md — this documentation
+- python_generator.py — main Tkinter application (current code)
 
 
 
