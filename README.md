@@ -27,12 +27,21 @@ A Python Tkinter application to calculate, store, and analyze Body Mass Index (B
 
 ---
 
+### 3. **Weather App**
+A Python Tkinter application to fetch and display weather information for any city.
+
+**Features:**
+- Shows **current weather** , **7-day forecast** and **hourly forecast**.
+- Displays temperature, humidity, wind speed, and weather conditions.
+- **Dynamic icons** for weather conditions.
+- Built using **Tkinter** and integrated with a weather API.
+
+---
+
 ## 🛠️ Tech Stack
 - **Python 3**
 - **Tkinter** — GUI framework.
 - **SQLite3** — Local database storage.
 - **Matplotlib** — Graphs for trends.
 - **Pandas** — Data handling.
-
----
-
+- **Requests** — API calls for Weather App.
