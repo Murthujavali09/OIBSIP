@@ -134,21 +134,3 @@ Tables are created automatically on first run.
 - Theming and accessibility improvements.
 
 
-<div style="text-align: center">⁂</div>
-
-[^1]: image.jpg
-
-[^2]: create_account.py
-
-[^3]: dashboard.py
-
-[^4]: database.py
-
-[^5]: history.py
-
-[^6]: login.py
-
-[^7]: main.py
-
-[^8]: trends.py
-
