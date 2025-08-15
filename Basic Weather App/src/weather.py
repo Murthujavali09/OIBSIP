@@ -60,7 +60,8 @@ class Weather(Frame):
                 widget.destroy()  # Clear old forecast
 
             options_frame = Frame(self.frame2, bg="#1F2C3C")
-            options_frame.grid(row=0, column=0, columnspan=5, sticky="ew", pady=(7, 0))
+            options_frame.grid(row=0, column=0, columnspan=5,
+                               sticky="ew", pady=(7, 0))
             options_frame.grid_rowconfigure(0, weight=1)
 
             daily = Button(
@@ -87,7 +88,8 @@ class Weather(Frame):
 
             if to_show == "daily":
                 daily.config(fg="white")
-                headers = ["Day", "Weather", "Condition", "Min Temp", "Max Temp"]
+                headers = ["Day", "Weather",
+                           "Condition", "Min Temp", "Max Temp"]
                 for col, txt in enumerate(headers):
                     Label(
                         self.frame2,
@@ -130,7 +132,8 @@ class Weather(Frame):
                         anchor="w",
                     ).grid(row=1, column=col, sticky="w", padx=40)
                 for i, hour in enumerate(hourly_forecast):
-                    temp = hour["temp_c"] if is_metric else self.c_to_f(hour["temp_c"])
+                    temp = hour["temp_c"] if is_metric else self.c_to_f(
+                        hour["temp_c"])
                     wind = (
                         hour["windspeed_kph"]
                         if is_metric
@@ -175,17 +178,7 @@ class Weather(Frame):
             fg="white",
         ).grid(row=row, column=4, sticky="w", padx=40, pady=2)
 
-    def add_week(
-        self,
-        date,
-        day_name,
-        icon_path,
-        condition,
-        min_temp_disp,
-        max_temp_disp,
-        row,
-        size=(50, 50),
-    ):
+    def add_week(self,date,day_name,icon_path,condition,min_temp_disp,max_temp_disp,row,size=(50, 50),):
         today_str = datetime.today().strftime("%Y-%m-%d")
 
         Label(
@@ -208,7 +201,8 @@ class Weather(Frame):
                 frames = []
                 for i in range(frame_count):
                     pil_img.seek(i)
-                    frame_resized = pil_img.resize(size, Image.Resampling.LANCZOS)
+                    frame_resized = pil_img.resize(
+                        size, Image.Resampling.LANCZOS)
                     frames.append(ImageTk.PhotoImage(frame_resized))
                 pil_img.close()
                 self.icon_cache[icon_path] = (frames, delay)
@@ -281,7 +275,7 @@ class Weather(Frame):
         # ------------------- LEFT PANEL -----------------
         frame1 = Frame(self, bg="#0C101C")
         frame1.grid(row=0, column=0, sticky="ewns")
-        frame1.grid_columnconfigure(0, weight=1, uniform="col")
+        frame1.grid_columnconfigure(0, weight=1)
         frame1.grid_rowconfigure(0, weight=1)
         frame1.grid_rowconfigure(1, weight=0)
         frame1.grid_rowconfigure(2, weight=3)
@@ -358,7 +352,8 @@ class Weather(Frame):
             sub_box1, text="", font=("", 50), bg="#1F2C3C", fg="white"
         )
         self.curr_temp.grid(row=0, column=0, sticky="w", padx=10)
-        self.curr_icon = Label(sub_box1, image=self.photo, bg="#1F2C3C", fg="white")
+        self.curr_icon = Label(sub_box1, image=self.photo,
+                               bg="#1F2C3C", fg="white")
         self.curr_icon.grid(row=0, column=2, sticky="e", padx=10)
         self.description = Label(
             box1,
@@ -373,7 +368,8 @@ class Weather(Frame):
         self.description.grid(row=3, column=0, sticky="ewsn")
 
         # -- seperator
-        Frame(frame1, height=2).grid(row=1, column=0, sticky="ew", padx=20, pady=5)
+        Frame(frame1, height=2).grid(
+            row=1, column=0, sticky="ew", padx=20, pady=5)
 
         # -- box2 --
         box2 = Frame(frame1, bg="#1F2C3C", padx=10, pady=10)

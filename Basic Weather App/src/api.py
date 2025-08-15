@@ -11,7 +11,7 @@ weather_codes = {
     2: "Partly cloudy",
     3: "Overcast",
     45: "Fog",
-    48: "Depositing rime fog",
+    48: "Fog",
     51: "Light drizzle",
     53: "Moderate drizzle",
     55: "Dense drizzle",
@@ -22,11 +22,11 @@ weather_codes = {
     73: "Moderate snow",
     75: "Heavy snow",
     80: "Rain showers",
-    81: "Moderate rain showers",
-    82: "Heavy rain showers",
+    81: "Moderate rain",
+    82: "Heavy rain",
     95: "Thunderstorm",
-    96: "Thunderstorm with hail",
-    99: "Thunderstorm with heavy hail",
+    96: "Hail",
+    99: "Heavy hail",
 }
 
 weather_icons = {
@@ -138,7 +138,7 @@ def get_weather_data(city):
                 }
             )
 
-        for i in range(6, 18):
+        for i in range(6, 17):
             hourly_forecast.append(
                 {
                     "time": datetime.fromisoformat(data["hourly"]["time"][i]).strftime(

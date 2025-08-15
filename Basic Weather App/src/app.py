@@ -30,7 +30,7 @@ if __name__ == "__main__":
     app = App()  # ----->app.Tk() or root = Tk()
     app.title("Weather App")
 
-    app.geometry("1200x600")
+    app.state("zoomed")
     app.minsize(1200, 600)
     app.configure(bg="white")
     app.mainloop()  # --->root.mainloop()
