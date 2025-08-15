@@ -89,7 +89,7 @@ A desktop GUI weather application that fetches real‑time conditions and a 7‑
 
 - Requirements:
     - Python 3.x
-    - pip install -r requirements.txt (example)
+    - pip install the following :
         - requests
         - pillow
 - Run:
@@ -130,17 +130,4 @@ A desktop GUI weather application that fetches real‑time conditions and a 7‑
 - Include precipitation probability, pressure, and UV index if available.
 - Add theming (dark/light) and accessibility improvements (keyboard navigation, ARIA‑like semantics where applicable).
 - Package as an executable (PyInstaller) for easier distribution.
-
-
-<div style="text-align: center">⁂</div>
-
-[^1]: image.jpg
-
-[^2]: api.py
-
-[^3]: app.py
-
-[^4]: dashboard.py
-
-[^5]: weather.py
 
