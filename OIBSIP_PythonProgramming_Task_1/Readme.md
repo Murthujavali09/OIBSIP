@@ -1,4 +1,4 @@
-# Secure Password Generator (Tkinter, Python)
+# Secure Password Generator 
 
 A desktop GUI tool to generate strong, customizable passwords using cryptographically secure randomness, with options to include/exclude character types and specific characters, plus instant strength feedback.
 
@@ -105,9 +105,9 @@ A desktop GUI tool to generate strong, customizable passwords using cryptographi
 - Persist last used settings.
 
 
-## Project Structure (suggested)
+## Project Structure 
 
-- python_generator.py — main Tkinter application (current code)
+- python_generator.py 
 
 
 
